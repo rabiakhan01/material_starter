@@ -3,6 +3,7 @@ import Header from "../../components/shared/Header";
 import Navbar from "../../components/shared/Navbar";
 import images from "../../assets/images/images";
 import { textPrimaryColor, textSecondaryColor } from "../../utils/styles/colors";
+import Form from '../../components/TenantImprovement/Form';
 
 const TenantImprovement = () => {
     return (
@@ -63,7 +64,7 @@ const TenantImprovement = () => {
                         <ListItem sx={{ display: 'list-item', p: 0.2 }}>Materials and color samples/images/brochures (Final Design Submission)</ListItem>
                     </List>
                 </Box>
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.8 }}>
                     <Typography component="h1" sx={{ color: textSecondaryColor, fontSize: 23 }}>INSURANCE REQUIREMENTS FOR CONTRACTORS</Typography>
                     <Typography sx={{ color: textPrimaryColor }}>CONTRACTORS LISTED IN APPLICATION SHALL SUBMIT:</Typography>
                     <List sx={{ color: textPrimaryColor, listStyleType: 'disc', pl: 6 }}>
@@ -73,7 +74,7 @@ const TenantImprovement = () => {
                     </List>
                 </Box>
             </Box>
-
+            <Form />
         </Box>
     )
 }
