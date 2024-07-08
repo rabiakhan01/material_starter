@@ -6,3 +6,14 @@ const lightBlackColor = "#1E1F26";
 const textYellowColor = "#CDA950";
 const textBlackColor = '#000000';
 const textGrayColor = '#8E9091';
+
+export {
+    primaryColor,
+    secondaryColor,
+    textBlackColor,
+    textGrayColor,
+    textPrimaryColor,
+    textSecondaryColor,
+    textYellowColor,
+    lightBlackColor,
+}
