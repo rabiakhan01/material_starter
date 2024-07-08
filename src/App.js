@@ -1,10 +1,14 @@
-import './App.css';
+import { Box, Toolbar } from "@mui/material";
+import Navbar from "./components/Navbar";
+import Form from "./components/Form";
 
 function App() {
   return (
-    <div>
-      <p>hello world</p>
-    </div>
+    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100vh' }} component="div">
+      <Navbar />
+      <Toolbar />
+      <Form />
+    </Box>
   );
 }
 
