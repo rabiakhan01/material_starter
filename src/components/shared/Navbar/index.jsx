@@ -4,7 +4,7 @@ import { primaryColor, secondaryColor, textBlackColor, textPrimaryColor, textSec
 
 const Navbar = () => {
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', px: 20, py: 0.8, position: 'sticky', top: '0', bgcolor: primaryColor }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', px: 20, py: 0.8, position: 'sticky', top: '0', bgcolor: primaryColor, zIndex: 20 }}>
             <Box sx={{ bgcolor: 'white', bgcolor: primaryColor }}>
                 <img src={images.logo} alt="" style={{ height: 42, width: 160 }} />
             </Box>

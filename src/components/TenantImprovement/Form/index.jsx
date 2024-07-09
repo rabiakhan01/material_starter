@@ -15,35 +15,117 @@ const Form = () => {
                 <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', width: '100%', justifyContent: 'center', gap: 2 }}>
                     <Box sx={{ width: '42%' }}>
                         <Typography sx={{ color: textGrayColor, fontSize: 13 }}>Owner Name</Typography>
-                        <OutlinedInput sx={{ bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%' }} placeholder="Name" />
+                        <OutlinedInput sx={{
+                            bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%',
+                            "&.MuiOutlinedInput-root": {
+                                "&.Mui-focused fieldset": {
+                                    borderColor: secondaryColor,
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: secondaryColor
+                                },
+                            },
+                        }} placeholder="Name" />
                     </Box>
                     <Box sx={{ width: '42%' }}>
                         <Typography sx={{ color: textGrayColor, fontSize: 13 }}>Owner Phone</Typography>
-                        <OutlinedInput sx={{ bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%' }} placeholder="(123) 456 6789" />
+                        <OutlinedInput sx={{
+                            bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%',
+                            "&.MuiOutlinedInput-root": {
+                                "&.Mui-focused fieldset": {
+                                    borderColor: secondaryColor,
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: secondaryColor
+                                },
+                            },
+                        }} placeholder="(123) 456 6789" />
                     </Box>
                     <Box sx={{ width: '42%' }}>
                         <Typography sx={{ color: textGrayColor, fontSize: 13 }}>Owner Adress</Typography>
-                        <OutlinedInput sx={{ bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%' }} placeholder="123 Main Street" />
+                        <OutlinedInput sx={{
+                            bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%',
+                            "&.MuiOutlinedInput-root": {
+                                "&.Mui-focused fieldset": {
+                                    borderColor: secondaryColor,
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: secondaryColor
+                                },
+                            },
+                        }} placeholder="123 Main Street" />
                     </Box>
                     <Box sx={{ width: '42%' }}>
                         <Typography sx={{ color: textGrayColor, fontSize: 13 }}>Unit Number</Typography>
-                        <OutlinedInput sx={{ bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%' }} placeholder="Unit Number" />
+                        <OutlinedInput sx={{
+                            bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%',
+                            "&.MuiOutlinedInput-root": {
+                                "&.Mui-focused fieldset": {
+                                    borderColor: secondaryColor,
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: secondaryColor
+                                },
+                            },
+                        }} placeholder="Unit Number" />
                     </Box>
                     <Box sx={{ width: '42%' }}>
                         <Typography sx={{ color: textGrayColor, fontSize: 13 }}>Owner Mailing Adress</Typography>
-                        <OutlinedInput sx={{ bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%' }} placeholder="123 Main Street" />
+                        <OutlinedInput sx={{
+                            bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%',
+                            "&.MuiOutlinedInput-root": {
+                                "&.Mui-focused fieldset": {
+                                    borderColor: secondaryColor,
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: secondaryColor
+                                },
+                            },
+                        }} placeholder="123 Main Street" />
                     </Box>
                     <Box sx={{ width: '42%' }}>
                         <Typography sx={{ color: textGrayColor, fontSize: 13 }}>Owner Email Adress</Typography>
-                        <OutlinedInput sx={{ bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%' }} placeholder="example@gmail.com" />
+                        <OutlinedInput sx={{
+                            bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%',
+
+                            "&.MuiOutlinedInput-root": {
+                                "&.Mui-focused fieldset": {
+                                    borderColor: secondaryColor,
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: secondaryColor
+                                },
+                            },
+                        }} placeholder="example@gmail.com" />
                     </Box>
                     <Box sx={{ width: '84.8%' }}>
                         <Typography sx={{ color: textGrayColor, fontSize: 13 }}>Additional Email Address ( If desired for notifications related to this application )</Typography>
-                        <OutlinedInput fullWidth sx={{ bgcolor: lightBlackColor, fontSize: 13, borderRadius: 3, height: 55, width: '100%', input: { color: textSecondaryColor } }} placeholder="example@gmail.com" />
+                        <OutlinedInput fullWidth sx={{
+                            bgcolor: lightBlackColor, fontSize: 13, borderRadius: 3, height: 55, width: '100%', input: {
+                                color: textSecondaryColor,
+                            },
+                            "&.MuiOutlinedInput-root": {
+                                "&.Mui-focused fieldset": {
+                                    borderColor: secondaryColor,
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: secondaryColor
+                                },
+                            },
+                        }} placeholder="example@gmail.com" />
                     </Box>
                     <Box sx={{ width: '84.8%' }}>
                         <Typography sx={{ color: textGrayColor, fontSize: 13 }}>Description of Proposed Improvement</Typography>
-                        <OutlinedInput fullWidth sx={{ bgcolor: lightBlackColor, fontSize: 13, borderRadius: 3, height: 55, width: '100%', input: { color: textSecondaryColor } }} placeholder="Example@gmail.com" />
+                        <OutlinedInput fullWidth sx={{
+                            bgcolor: lightBlackColor, fontSize: 13, borderRadius: 3, height: 55, width: '100%', input: { color: textSecondaryColor }, "&.MuiOutlinedInput-root": {
+                                "&.Mui-focused fieldset": {
+                                    borderColor: secondaryColor,
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: secondaryColor
+                                },
+                            },
+                        }} placeholder="Example@gmail.com" />
                         <Typography sx={{ color: textSecondaryColor, fontSize: 13, pt: 1 }}>
                             Provide a clear and comprehensive description of the Improvement(s) in detail and use additional pages and drawings as applicable.
                             Each submittal should convey a clear and comprehensive description of the proposed improvements.
@@ -53,11 +135,33 @@ const Form = () => {
                     </Box>
                     <Box sx={{ width: '42%' }}>
                         <Typography sx={{ fontSize: 13, color: textGrayColor }}>Attachments Documents Listed From Submittal Checklist</Typography>
-                        <OutlinedInput sx={{ bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%', input: { color: textSecondaryColor } }} placeholder="example@gmail.com" />
+                        <OutlinedInput sx={{
+                            bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%', input: {
+                                color: textSecondaryColor,
+                            },
+                            "&.MuiOutlinedInput-root": {
+                                "&.Mui-focused fieldset": {
+                                    borderColor: secondaryColor,
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: secondaryColor
+                                },
+                            },
+                        }} placeholder="example@gmail.com" />
                     </Box>
                     <Box sx={{ width: '42%' }}>
                         <Typography sx={{ fontSize: 13, color: textGrayColor }}>Are you using any of the following?</Typography>
-                        <OutlinedInput sx={{ bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%', input: { color: textSecondaryColor } }} placeholder="example@gmail.com" />
+                        <OutlinedInput sx={{
+                            bgcolor: lightBlackColor, fontSize: 13, input: { color: textSecondaryColor }, borderRadius: 3, height: 55, width: '100%', input: { color: textSecondaryColor },
+                            "&.MuiOutlinedInput-root": {
+                                "&.Mui-focused fieldset": {
+                                    borderColor: secondaryColor,
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: secondaryColor
+                                },
+                            },
+                        }} placeholder="example@gmail.com" />
                     </Box>
                     <Box sx={{ width: '84.8%' }} >
                         <Button variant="filled" sx={{ bgcolor: lightBlackColor, height: 45, borderRadius: 3, color: textGrayColor, my: 2 }} fullWidth>Submit</Button>

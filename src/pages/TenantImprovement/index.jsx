@@ -4,6 +4,7 @@ import Navbar from "../../components/shared/Navbar";
 import images from "../../assets/images/images";
 import { textPrimaryColor, textSecondaryColor } from "../../utils/styles/colors";
 import Form from '../../components/TenantImprovement/Form';
+import Footer from "../../components/shared/Footer";
 
 const TenantImprovement = () => {
     return (
@@ -11,10 +12,10 @@ const TenantImprovement = () => {
             <Header />
             <Navbar />
             <Box sx={{ display: 'flex', flexDirection: 'column', px: 20, gap: 6, pb: 6 }}>
-                <Box sx={{ textAlign: 'center' }}>
+                <Box sx={{ textAlign: 'center', pt: 1 }}>
                     <Typography sx={{ color: textPrimaryColor, fontSize: 40 }}>Tenant Improvement Request</Typography>
                 </Box>
-                <Box sx={{ height: '32rem', overflow: 'hidden', borderRadius: 5 }}>
+                <Box sx={{ height: '34rem', overflow: 'hidden', borderRadius: 5 }}>
                     <img src={images.cover_image} alt="" className="object-cover" />
                 </Box>
             </Box>
@@ -75,6 +76,7 @@ const TenantImprovement = () => {
                 </Box>
             </Box>
             <Form />
+            <Footer />
         </Box>
     )
 }
