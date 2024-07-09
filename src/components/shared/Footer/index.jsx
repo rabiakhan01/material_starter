@@ -9,7 +9,7 @@ const Footer = () => {
         <Box sx={{ bgcolor: lightBlackColor, px: 20, pt: 6, width: '100%', display: 'flex', flexDirection: 'column' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                 <Box sx={{ width: '50%' }}>
-                    <Box sx={{ bgcolor: 'white', bgcolor: lightBlackColor, pb: 3 }}>
+                    <Box sx={{ bgcolor: 'white', bgcolor: lightBlackColor, pb: 3, cursor: 'pointer' }}>
                         <img src={images.logo} alt="" style={{ height: 42, width: 160 }} />
                     </Box>
                     <Typography sx={{ color: textGrayColor, fontSize: 13, width: '20rem' }}>Not just a storage unit, an investment. RV & Boat Storage & Investing in storage units at Luxelocker.</Typography>
@@ -50,7 +50,7 @@ const Footer = () => {
             <Divider sx={{ bgcolor: textGrayColor, mt: 5 }} />
             <Box sx={{ display: 'flex', justifyContent: 'space-between', pt: 2, pb: 3 }}>
                 <Typography sx={{ color: textGrayColor, fontSize: 13, fontWeight: 500 }}>©2024 All rights reserved</Typography>
-                <Typography sx={{ color: textGrayColor, fontSize: 13, fontWeight: 500 }}>Privacy Policy  License Agreement</Typography>
+                <Typography sx={{ color: textGrayColor, fontSize: 13, fontWeight: 500 }}><Typography sx={{ cursor: 'pointer', fontSize: 13, fontWeight: 500, ":hover": { color: textSecondaryColor } }} component="span"> Privacy Policy</Typography>  License Agreement</Typography>
                 <Box sx={{ display: 'flex', gap: 2.5 }}>
                     <FacebookRoundedIcon sx={{ color: textGrayColor, height: 20, width: 20 }} />
                     <InstagramIcon sx={{ color: textGrayColor, height: 20, width: 20 }} />

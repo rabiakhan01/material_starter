@@ -12,7 +12,7 @@ const TenantImprovement = () => {
             <Header />
             <Navbar />
             <Box sx={{ display: 'flex', flexDirection: 'column', px: 20, gap: 6, pb: 6 }}>
-                <Box sx={{ textAlign: 'center', pt: 1 }}>
+                <Box sx={{ textAlign: 'center', pt: 3 }}>
                     <Typography sx={{ color: textPrimaryColor, fontSize: 40 }}>Tenant Improvement Request</Typography>
                 </Box>
                 <Box sx={{ height: '34rem', overflow: 'hidden', borderRadius: 5 }}>

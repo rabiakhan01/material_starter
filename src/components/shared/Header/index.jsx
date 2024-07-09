@@ -13,19 +13,19 @@ const Header = () => {
             <Box sx={{ display: 'flex', gap: 6 }}>
                 <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }} >
                     <PhoneIcon sx={{ color: secondaryColor, height: 20, width: 20 }} />
-                    <Typography sx={{ color: textSecondaryColor, fontSize: 13 }}>
+                    <Typography sx={{ color: textSecondaryColor, fontSize: 13, cursor: 'pointer', "&:hover": { color: secondaryColor } }}>
                         833-333-5893
                     </Typography>
                 </Box>
                 <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}>
                     <EmailIcon sx={{ color: secondaryColor, height: 20, width: 20 }} />
-                    <Typography sx={{ color: textSecondaryColor, fontSize: 13 }}>
+                    <Typography sx={{ color: textSecondaryColor, fontSize: 13, cursor: 'pointer', "&:hover": { color: secondaryColor } }}>
                         info@luxelocker.com
                     </Typography>
                 </Box>
                 <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}>
                     <LocationOnIcon sx={{ color: secondaryColor, height: 20, width: 20 }} />
-                    <Typography sx={{ color: textSecondaryColor, fontSize: 13 }}>
+                    <Typography sx={{ color: textSecondaryColor, fontSize: 13, cursor: 'pointer', "&:hover": { color: secondaryColor } }}>
                         349 Lake Havasu Ave S. Suite 106. Lake Havasu City, AZ 86403
                     </Typography>
                 </Box>

@@ -1,5 +1,6 @@
 const primaryColor = '#0f1217';
 const secondaryColor = "#CDA950";
+const lightYellowColor = '#cda96e';
 const textPrimaryColor = "#FFFFFF";
 const textSecondaryColor = '#fff';
 const lightBlackColor = "#1E1F26";
@@ -11,6 +12,7 @@ export {
     primaryColor,
     secondaryColor,
     textBlackColor,
+    lightYellowColor,
     textGrayColor,
     textPrimaryColor,
     textSecondaryColor,
