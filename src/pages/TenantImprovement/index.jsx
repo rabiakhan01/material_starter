@@ -9,17 +9,15 @@ import Footer from "../../components/shared/Footer";
 const TenantImprovement = () => {
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <Header />
-            <Navbar />
-            <Box sx={{ display: 'flex', flexDirection: 'column', px: 20, gap: 6, pb: 6 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 6, pb: 6 }}>
                 <Box sx={{ textAlign: 'center', pt: 3 }}>
                     <Typography sx={{ color: textPrimaryColor, fontSize: 40 }}>Tenant Improvement Request</Typography>
                 </Box>
-                <Box sx={{ height: '34rem', overflow: 'hidden', borderRadius: 5 }}>
-                    <img src={images.cover_image} alt="" className="object-cover" />
+                <Box sx={{ height: '62vh', overflow: 'hidden', borderRadius: 5, bgcolor: 'green' }}>
+                    <img src={images.cover_image} alt="" style={{ objectFit: 'cover', height: '100%', width: '100%' }} />
                 </Box>
             </Box>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4, px: 20 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4, }}>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                     <Typography component="h1" sx={{ color: textSecondaryColor, fontSize: 25 }}>Why Sumbit Improvement</Typography>
                     <Box sx={{ py: 3.5, display: 'flex', flexDirection: 'column', gap: 1.8 }}>
@@ -76,7 +74,6 @@ const TenantImprovement = () => {
                 </Box>
             </Box>
             <Form />
-            <Footer />
         </Box>
     )
 }

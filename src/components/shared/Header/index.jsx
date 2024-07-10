@@ -9,30 +9,32 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Header = () => {
     return (
-        <Box component="header" sx={{ height: 48, bgcolor: lightBlackColor, display: 'flex', justifyContent: 'space-between', alignItems: 'center', px: 20 }}>
-            <Box sx={{ display: 'flex', gap: 6 }}>
-                <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }} >
-                    <PhoneIcon sx={{ color: secondaryColor, height: 20, width: 20 }} />
-                    <Typography sx={{ color: textSecondaryColor, fontSize: 13, cursor: 'pointer', "&:hover": { color: secondaryColor } }}>
-                        833-333-5893
-                    </Typography>
+        <Box sx={{ bgcolor: lightBlackColor, width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', }}>
+            <Box component="header" sx={{ height: 48, display: { xs: 'none', md: 'flex' }, justifyContent: 'space-between', alignItems: 'center', width: '100%', maxWidth: '1145px', px: { md: 2, lg: 0 }, mx: { lg: 'auto' } }}>
+                <Box sx={{ display: 'flex', gap: 6 }}>
+                    <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }} >
+                        <PhoneIcon sx={{ color: secondaryColor, height: 20, width: 20 }} />
+                        <Typography sx={{ color: textSecondaryColor, fontSize: 13, cursor: 'pointer', "&:hover": { color: secondaryColor } }}>
+                            833-333-5893
+                        </Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}>
+                        <EmailIcon sx={{ color: secondaryColor, height: 20, width: 20 }} />
+                        <Typography sx={{ color: textSecondaryColor, fontSize: 13, cursor: 'pointer', "&:hover": { color: secondaryColor } }}>
+                            info@luxelocker.com
+                        </Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}>
+                        <LocationOnIcon sx={{ color: secondaryColor, height: 20, width: 20 }} />
+                        <Typography sx={{ color: textSecondaryColor, fontSize: 13, cursor: 'pointer', "&:hover": { color: secondaryColor } }}>
+                            349 Lake Havasu Ave S. Suite 106. Lake Havasu City, AZ 86403
+                        </Typography>
+                    </Box>
                 </Box>
-                <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}>
-                    <EmailIcon sx={{ color: secondaryColor, height: 20, width: 20 }} />
-                    <Typography sx={{ color: textSecondaryColor, fontSize: 13, cursor: 'pointer', "&:hover": { color: secondaryColor } }}>
-                        info@luxelocker.com
-                    </Typography>
+                <Box sx={{ display: 'flex', gap: 2.5 }}>
+                    <FacebookRoundedIcon sx={{ color: secondaryColor, height: 20, width: 20 }} />
+                    <InstagramIcon sx={{ color: secondaryColor, height: 20, width: 20 }} />
                 </Box>
-                <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'center' }}>
-                    <LocationOnIcon sx={{ color: secondaryColor, height: 20, width: 20 }} />
-                    <Typography sx={{ color: textSecondaryColor, fontSize: 13, cursor: 'pointer', "&:hover": { color: secondaryColor } }}>
-                        349 Lake Havasu Ave S. Suite 106. Lake Havasu City, AZ 86403
-                    </Typography>
-                </Box>
-            </Box>
-            <Box sx={{ display: 'flex', gap: 2.5 }}>
-                <FacebookRoundedIcon sx={{ color: secondaryColor, height: 20, width: 20 }} />
-                <InstagramIcon sx={{ color: secondaryColor, height: 20, width: 20 }} />
             </Box>
         </Box>
     )
