@@ -3,11 +3,9 @@ import React from "react";
 import { lightBlackColor, secondaryColor, textBlackColor, textGrayColor, textPrimaryColor, textSecondaryColor } from "../../../utils/styles/colors";
 import { useState } from "react";
 import ExpandCircleDownOutlinedIcon from '@mui/icons-material/ExpandCircleDownOutlined';
-import { lightBlue } from "@mui/material/colors";
 import Item from "../../shared/MenuItem";
 import InputField from "../../shared/InputField";
-import { Input } from "postcss";
-const { Box, Typography, OutlinedInput, Button, darken, Select, MenuItem, InputLabel, paperClasses, lighten } = require("@mui/material")
+const { Box, Typography, Button, darken, Select, lighten, MenuItem, CssBaseline } = require("@mui/material")
 const Form = () => {
 
 
@@ -16,10 +14,11 @@ const Form = () => {
     const handelClick = () => {
         setButtonDisabled(!buttonDisabled)
     }
-    const [age, setAge] = useState('Select Architecture/Contractor');
+    const [contractor, setContractor] = useState('Select Architecture/Contractor');
 
     const handleChange = (event) => {
-        setAge(event.target.value);
+        console.log("event", event.target.value)
+        setContractor(event.target.value);
     };
     const handelOpen = () => {
         setRotateIcon(true);
@@ -30,13 +29,13 @@ const Form = () => {
     return (
         <Box component="form" sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', pt: 10 }}>
             <Box component="div" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', pb: 4 }}>
-                <Typography sx={{ color: textSecondaryColor, fontWeight: 600, textTransform: 'uppercase', pb: 1.7 }}>application for design review</Typography>
+                <Typography sx={{ color: textSecondaryColor, fontWeight: 600, textTransform: 'uppercase', pb: 1.7, fontSize: { xs: 16, sm: 20 } }}>application for design review</Typography>
                 <Typography sx={{ color: textPrimaryColor }}>Submit To:</Typography>
                 <Typography sx={{ color: textPrimaryColor }}>Luxe Locker DRC</Typography>
             </Box>
             <Box>
-                <Typography sx={{ pl: 10, color: textSecondaryColor, pb: 1 }}>This form is to be used for all requests for Design Review.</Typography>
                 <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', width: '100%', justifyContent: 'center', gap: 2 }}>
+                    <Typography sx={{ color: textSecondaryColor, pb: 1, fontSize: { xs: 14, sm: 16 }, width: { xs: '99%', md: '88%' } }} >This form is to be used for all requests for Design Review.</Typography>
                     <InputField name="Owner Name" placeholder="name" width="44%" tabWidth="48%" />
                     <InputField name="Owner Phone" placeholder="(123) 456 6789" width="44%" tabWidth="48%" />
                     <InputField name="Owner Adress" placeholder="123 Main Street" width="44%" tabWidth="48%" />
@@ -47,7 +46,7 @@ const Form = () => {
                     <Box sx={{ width: { xs: '99%', md: '88%' } }}>
                         <InputField name="Description of Proposed Improvement" height={80} width="100%" />
                         <Typography sx={{ color: textSecondaryColor, fontSize: 13, pt: 1 }}>
-                            Provide a clear and comprehensive description of the Improvement(s) in detail and use additional pages and drawings as applicable.
+                            Provide a clear and comprehensive description of the Improvement(s) in detail and use additional pContractors and drawings as applicable.
                             Each submittal should convey a clear and comprehensive description of the proposed improvements.
                             Owner agrees to maintain all Improvement(s) Owner agrees to comply with all Applicable Law and to obtain all necessary permits. Owner
                             agrees not to begin construction of any proposed Improvement(s) until notified in writing of the DRC's approval.
@@ -58,8 +57,8 @@ const Form = () => {
                         <Box width={{ xs: '100%', sm: '48%', md: '44%' }}>
                             <Typography sx={{ fontSize: 13, color: textGrayColor }}>Are you using any of the following?</Typography>
                             <Select
-                                value={age}
-                                renderValue={() => (age)}
+                                value={contractor}
+                                renderValue={() => (contractor)}
                                 onChange={handleChange}
                                 fullWidth
                                 onClose={handelClose}
@@ -67,17 +66,20 @@ const Form = () => {
                                 IconComponent={() => (<ExpandCircleDownOutlinedIcon sx={{ transform: rotateIcon ? 'rotate(180deg)' : 'rotate(0deg)', color: textGrayColor, }} />)}
                                 sx={{
                                     color: textGrayColor, fontSize: 15, bgcolor: lightBlackColor, borderRadius: 3, px: 2, "&:hover": { border: 2, borderColor: secondaryColor },
-                                    '&&.MuiSelected': {
-                                        bgcolor: secondaryColor
+                                    '&&.Mui-focused': {
+                                        border: 2,
+                                        borderColor: secondaryColor,
+                                    },
+                                    '&&.MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root': {
+                                        border: 'none'
                                     }
                                 }}
-
                                 MenuProps={{ PaperProps: { style: { backgroundColor: lightBlackColor, } } }}
                             >
-                                <Item name="Contractor" />
-                                <Item name="Architecture" />
-                                <Item name="Contractor & Architecture" />
-                                <Item name="N/A" />
+                                <MenuItem value="Contractor" sx={{ color: textPrimaryColor, ":hover": { bgcolor: lighten(secondaryColor, 0.2) }, ':focus': { bgcolor: secondaryColor, ":hover": { bgcolor: darken(secondaryColor, 0.28) } } }}>Contractor</MenuItem>
+                                <MenuItem value="Architecture" sx={{ color: textPrimaryColor, ":hover": { bgcolor: lighten(secondaryColor, 0.2) }, ':focus': { bgcolor: secondaryColor, ":hover": { bgcolor: darken(secondaryColor, 0.28) } } }}>Architecture</MenuItem>
+                                <MenuItem value="Contractor & Architecture" sx={{ color: textPrimaryColor, ":hover": { bgcolor: lighten(secondaryColor, 0.2) }, ':focus': { bgcolor: secondaryColor, ":hover": { bgcolor: darken(secondaryColor, 0.28) } } }}>Contractor & Architecture</MenuItem>
+                                <MenuItem value="N/A" sx={{ color: textPrimaryColor, ":hover": { bgcolor: lighten(secondaryColor, 0.2) }, ':focus': { bgcolor: secondaryColor, ":hover": { bgcolor: darken(secondaryColor, 0.28) } } }}>N/A</MenuItem>
                             </Select>
                         </Box>
                     </Box>
@@ -96,7 +98,7 @@ const Form = () => {
                     </Typography>
                 </Box>
             </Box>
-        </Box>
+        </Box >
     )
 }
 

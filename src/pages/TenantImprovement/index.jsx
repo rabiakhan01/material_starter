@@ -1,17 +1,14 @@
-import { Box, Container, List, ListItem, Typography } from "@mui/material";
-import Header from "../../components/shared/Header";
-import Navbar from "../../components/shared/Navbar";
+import { Box, List, ListItem, Typography } from "@mui/material";
 import images from "../../assets/images/images";
 import { textPrimaryColor, textSecondaryColor } from "../../utils/styles/colors";
 import Form from '../../components/TenantImprovement/Form';
-import Footer from "../../components/shared/Footer";
 
 const TenantImprovement = () => {
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 6, pb: 6 }}>
                 <Box sx={{ textAlign: 'center', pt: 3 }}>
-                    <Typography sx={{ color: textPrimaryColor, fontSize: 40 }}>Tenant Improvement Request</Typography>
+                    <Typography sx={{ color: textPrimaryColor, fontSize: { xs: 22, sm: 40 }, fontWeight: { xs: 700, sm: 600 } }}>Tenant Improvement Request</Typography>
                 </Box>
                 <Box sx={{ height: '62vh', overflow: 'hidden', borderRadius: 5, bgcolor: 'green' }}>
                     <img src={images.cover_image} alt="" style={{ objectFit: 'cover', height: '100%', width: '100%' }} />
@@ -19,9 +16,9 @@ const TenantImprovement = () => {
             </Box>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4, }}>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                    <Typography component="h1" sx={{ color: textSecondaryColor, fontSize: 25 }}>Why Sumbit Improvement</Typography>
+                    <Typography component="h1" sx={{ color: textSecondaryColor, fontSize: { xs: 20, sm: 25 } }}>Why Sumbit Improvement ?</Typography>
                     <Box sx={{ py: 3.5, display: 'flex', flexDirection: 'column', gap: 1.8 }}>
-                        <Typography sx={{ color: textPrimaryColor }}>Submitting improvements ensures compliance with community
+                        <Typography sx={{ color: textPrimaryColor, fontSize: { xs: 14, sm: 16 } }}>Submitting improvements ensures compliance with community
                             standards and safety regulations. This process maintains property value,
                             enhances aesthetics, and ensures that all modifications are safe and approved
                             by the Design Review Committee. </Typography>
@@ -30,9 +27,9 @@ const TenantImprovement = () => {
 
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5, pb: 1 }}>
-                    <Typography component="h1" sx={{ color: textSecondaryColor, fontSize: 23 }} >DESIGN REVIEW APPLICATION FORM AND CHECKLISTS</Typography>
-                    <Typography sx={{ color: textSecondaryColor }}>Please direct any questions about a submittal to Design Review Committee (DRC).</Typography>
-                    <Typography sx={{ color: textPrimaryColor, pt: 2 }}>
+                    <Typography component="h1" sx={{ color: textSecondaryColor, fontSize: { xs: 18, sm: 23 } }} >DESIGN REVIEW APPLICATION FORM AND CHECKLISTS</Typography>
+                    <Typography sx={{ color: textSecondaryColor, fontSize: { xs: 14, sm: 16 } }}>Please direct any questions about a submittal to Design Review Committee (DRC).</Typography>
+                    <Typography sx={{ color: textPrimaryColor, pt: 2, fontSize: { xs: 14, sm: 16 } }}>
                         Owners shall not rely on verbal approvals or indications from any person
                         that Improvements will be approved by the DRC. The DRC shall attempt to
                         either approve or disapprove in writing each complete request within 14
@@ -47,29 +44,29 @@ const TenantImprovement = () => {
                     </Typography>
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                    <Typography component="h1" sx={{ color: textSecondaryColor, fontSize: 23, textDecoration: 'underline' }}>SUBMITTAL CHECKLIST</Typography>
-                    <Typography sx={{ color: textPrimaryColor }}>A checklist of required submittal items is below for reference
+                    <Typography component="h1" sx={{ color: textSecondaryColor, fontSize: { xs: 18, sm: 23 }, textDecoration: 'underline' }}>SUBMITTAL CHECKLIST</Typography>
+                    <Typography sx={{ color: textPrimaryColor, fontSize: { xs: 14, sm: 16 } }}>A checklist of required submittal items is below for reference
                         but is not a comprehensive list of submittal requirements.
                     </Typography>
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                    <Typography component="h1" sx={{ color: textSecondaryColor, fontSize: 23 }}>PRELIMINARY AND FINAL DESIGN SUBMISSIONS</Typography>
+                    <Typography component="h1" sx={{ color: textSecondaryColor, fontSize: { xs: 18, sm: 23 } }}>PRELIMINARY AND FINAL DESIGN SUBMISSIONS</Typography>
                     <List component="nav" sx={{ color: textPrimaryColor, listStyleType: 'disc', pl: 2, display: 'flex', flexDirection: 'column' }}>
-                        <ListItem sx={{ display: 'list-item', p: 0.2 }}>Any applicable completed form(s) signed by Owner</ListItem>
-                        <ListItem sx={{ display: 'list-item', p: 0.2 }}>Floor plans</ListItem>
-                        <ListItem sx={{ display: 'list-item', p: 0.2 }}>Proposed improvement plans</ListItem>
-                        <ListItem sx={{ display: 'list-item', p: 0.2 }}>Full engineered construction documents (Final Design Submission)</ListItem>
-                        <ListItem sx={{ display: 'list-item', p: 0.2 }}>Specifications for all finishes, equipment, fixtures, etc. (Final Design Submission)</ListItem>
-                        <ListItem sx={{ display: 'list-item', p: 0.2 }}>Materials and color samples/images/brochures (Final Design Submission)</ListItem>
+                        <ListItem sx={{ display: 'list-item', p: 0.2, fontSize: { xs: 14, sm: 16 } }}>Any applicable completed form(s) signed by Owner</ListItem>
+                        <ListItem sx={{ display: 'list-item', p: 0.2, fontSize: { xs: 14, sm: 16 } }}>Floor plans</ListItem>
+                        <ListItem sx={{ display: 'list-item', p: 0.2, fontSize: { xs: 14, sm: 16 } }}>Proposed improvement plans</ListItem>
+                        <ListItem sx={{ display: 'list-item', p: 0.2, fontSize: { xs: 14, sm: 16 } }}>Full engineered construction documents (Final Design Submission)</ListItem>
+                        <ListItem sx={{ display: 'list-item', p: 0.2, fontSize: { xs: 14, sm: 16 } }}>Specifications for all finishes, equipment, fixtures, etc. (Final Design Submission)</ListItem>
+                        <ListItem sx={{ display: 'list-item', p: 0.2, fontSize: { xs: 14, sm: 16 } }}>Materials and color samples/images/brochures (Final Design Submission)</ListItem>
                     </List>
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.8 }}>
-                    <Typography component="h1" sx={{ color: textSecondaryColor, fontSize: 23 }}>INSURANCE REQUIREMENTS FOR CONTRACTORS</Typography>
-                    <Typography sx={{ color: textPrimaryColor }}>CONTRACTORS LISTED IN APPLICATION SHALL SUBMIT:</Typography>
+                    <Typography component="h1" sx={{ color: textSecondaryColor, fontSize: { xs: 18, sm: 23 } }}>INSURANCE REQUIREMENTS FOR CONTRACTORS</Typography>
+                    <Typography sx={{ color: textPrimaryColor, fontSize: { xs: 14, sm: 16 } }}>CONTRACTORS LISTED IN APPLICATION SHALL SUBMIT:</Typography>
                     <List sx={{ color: textPrimaryColor, listStyleType: 'disc', pl: 6 }}>
-                        <ListItem sx={{ display: 'list-item', p: 0.2 }}>General liability insurance coverage</ListItem>
-                        <ListItem sx={{ display: 'list-item', p: 0.2 }}>Bonding</ListItem>
-                        <ListItem sx={{ display: 'list-item', p: 0.2 }}>Workman's Compensation Insurance</ListItem>
+                        <ListItem sx={{ display: 'list-item', p: 0.2, fontSize: { xs: 14, sm: 16 } }}>General liability insurance coverage</ListItem>
+                        <ListItem sx={{ display: 'list-item', p: 0.2, fontSize: { xs: 14, sm: 16 } }}>Bonding</ListItem>
+                        <ListItem sx={{ display: 'list-item', p: 0.2, fontSize: { xs: 14, sm: 16 } }}>Workman's Compensation Insurance</ListItem>
                     </List>
                 </Box>
             </Box>
